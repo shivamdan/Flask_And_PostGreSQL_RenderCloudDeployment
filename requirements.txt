@@ -12,6 +12,7 @@ Flask==3.1.0
 Flask-SQLAlchemy==3.1.1
 fonttools==4.56.0
 greenlet==3.1.1
+gunicorn==23.0.0
 ipykernel==6.29.5
 ipython==8.32.0
 itsdangerous==2.2.0
