@@ -1,11 +1,13 @@
 from flask import Flask, render_template, request, jsonify
 import numpy as np
 import joblib
+import os
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
 # Database configuration
+DATABASE_URL = os.getenv("DATABASE_URL")  # Get from Render Environment Variables
 app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:admin@localhost/mydb"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
