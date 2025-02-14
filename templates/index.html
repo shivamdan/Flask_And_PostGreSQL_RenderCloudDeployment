@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Cancer Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+        }
+        select, input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h2>Lung Cancer Prediction</h2>
+    <form action="/predict" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required><br>
+
+        <label for="gender">Gender:</label>
+        <select name="gender">
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select><br>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" required><br>
+
+        <label for="smoking">Smoking:</label>
+        <select name="smoking"><option>YES</option><option>NO</option></select><br>
+
+        <label for="yellow_fingers">Yellow Fingers:</label>
+        <select name="yellow_fingers"><option>YES</option><option>NO</option></select><br>
+
+        <label for="anxiety">Anxiety:</label>
+        <select name="anxiety"><option>YES</option><option>NO</option></select><br>
+
+        <label for="peer_pressure">Peer Pressure:</label>
+        <select name="peer_pressure"><option>YES</option><option>NO</option></select><br>
+
+        <label for="chronic_disease">Chronic Disease:</label>
+        <select name="chronic_disease"><option>YES</option><option>NO</option></select><br>
+
+        <label for="fatigue">Fatigue:</label>
+        <select name="fatigue"><option>YES</option><option>NO</option></select><br>
+
+        <label for="allergy">Allergy:</label>
+        <select name="allergy"><option>YES</option><option>NO</option></select><br>
+
+        <label for="wheezing">Wheezing:</label>
+        <select name="wheezing"><option>YES</option><option>NO</option></select><br>
+
+        <label for="alcohol_consuming">Alcohol Consuming:</label>
+        <select name="alcohol_consuming"><option>YES</option><option>NO</option></select><br>
+
+        <label for="coughing">Coughing:</label>
+        <select name="coughing"><option>YES</option><option>NO</option></select><br>
+
+        <label for="shortness_of_breath">Shortness of Breath:</label>
+        <select name="shortness_of_breath"><option>YES</option><option>NO</option></select><br>
+
+        <label for="swallowing_difficulty">Swallowing Difficulty:</label>
+        <select name="swallowing_difficulty"><option>YES</option><option>NO</option></select><br>
+
+        <label for="chest_pain">Chest Pain:</label>
+        <select name="chest_pain"><option>YES</option><option>NO</option></select><br>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

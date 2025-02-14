@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            text-align: left;
+            margin-top: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+        }
+        .result-box {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .cancer {
+            background-color: red;
+        }
+        .no-cancer {
+            background-color: green;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Prediction Result for {{ name }}</h2>
+    <div class="container">
+        <p><strong>Probability of Lung Cancer:</strong> {{ probability }}%</p>
+        <p class="result-box {% if prediction == 'Lung Cancer Detected' %}cancer{% else %}no-cancer{% endif %}">
+            {{ prediction }}
+        </p>
+    </div>
+    <a href="/">Try Again</a>
+</body>
+</html>
